@@ -41,6 +41,20 @@ songItems.forEach((element, i) => {
         }
     });
 });
+let playButtons = document.querySelectorAll(".songItemPlay");
+
+playButtons.forEach((button) => {
+    button.addEventListener("click", (e) => {
+        // Remove existing selection
+        document.querySelectorAll(".songItem").forEach(item => {
+            item.classList.remove("selected");
+        });
+
+        // Add glow to the parent songItem
+        let songItem = e.target.closest(".songItem");
+        songItem.classList.add("selected");
+    });
+});
 
 songItems.forEach((element, i)=>{ 
     element.getElementsByTagName("img")[0].src = songs[i].coverPath; 
@@ -108,7 +122,7 @@ Array.from(document.getElementsByClassName('songItemPlay')).forEach((element)=>{
         songIndex = parseInt(e.target.id);
         e.target.classList.remove('fa-play-circle');
         e.target.classList.add('fa-pause-circle');
-        audioElement.src = `songs/${songIndex+1}.mp3`;
+        audioElement.src = `${songIndex+1}.mp3`;
         masterSongName.innerText = songs[songIndex].songName;
         audioElement.currentTime = 0;
         audioElement.play();
