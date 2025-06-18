@@ -35,31 +35,48 @@ nav ul li{
     width: 44px;
     padding: 0 8px;
 }
-.songInfo {
-    border: 2px solid #1DB954; /* Spotify green or any color you like */
-    padding: 10px;
-    border-radius: 10px;
-    background-color: #121212; /* Optional: dark background */
-    color: white;
-    display: flex;
-    align-items: center;
-    gap: 10px; /* spacing between image and text */
-    width: fit-content;
-    margin: 10px auto; /* center it horizontally */
-    box-shadow: 0 0 10px rgba(0,0,0,0.5); /* optional shadow */
+.songItem.selected {
+    box-shadow: 0 0 20px 5px rgba(255, 255, 255, 0.7); /* white glow */
+    color: #e4ec00; /* optionally make text white */
+    background-color: #5100f3; /* darker background */
+    font-weight: bold;
 }
+.songItem {
+    background-color: black;
+    color: red;
+    padding: 10px;
+    margin: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    /* Remove or reduce rounded corners */
+    border-radius: 0px; /* or remove this line completely */
+}
+
 .songInfo {
-     border: 2px solid #1DB954; /* Spotify green or any color you like */
+    background-color: black;
+    color: red;
+    padding: 5px;
+    margin: 5px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+     border: 8px solid #1DB954; /* Spotify green or any color you like */
     padding: 10px;
     border-radius: 10px;
     background-color: #121212; /* Optional: dark background */
     color: white;
     display: flex;
     align-items: center;
-    gap: 10px; /* spacing between image and text */
+    gap: 5px; /* spacing between image and text */
     width: fit-content;
     margin: 10px auto; /* center it horizontally */
-    box-shadow: 0 0 10px rgba(0,0,0,0.5); /* optional shadow *
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+
+
+   
+   
 }
 
 #masterPlay {
