@@ -21,6 +21,26 @@ let songs = [
     {songName: "Tumhari Kasam - Salam-e-Ishq", filePath: "2.mp3", coverPath: "9.jpg"},
     {songName: "Na Jaana - Salam-e-Ishq", filePath: "4.mp3", coverPath: "10.jpg"},
 ]
+songItems.forEach((element, i) => {
+    element.addEventListener('click', () => {
+        makeAllPlays();
+        songIndex = i;
+        audioElement.src = songs[songIndex].filePath;
+        masterSongName.innerText = songs[songIndex].songName;
+        audioElement.currentTime = 0;
+        audioElement.play();
+        gif.style.opacity = 1;
+        masterPlay.classList.remove('fa-play-circle');
+        masterPlay.classList.add('fa-pause-circle');
+
+        // update icon if play icon exists inside the songItem
+        let playBtn = element.querySelector('.songItemPlay');
+        if (playBtn) {
+            playBtn.classList.remove('fa-play-circle');
+            playBtn.classList.add('fa-pause-circle');
+        }
+    });
+});
 
 songItems.forEach((element, i)=>{ 
     element.getElementsByTagName("img")[0].src = songs[i].coverPath; 
@@ -36,7 +56,7 @@ masterPlay.addEventListener('click', ()=>{
         masterPlay.classList.add('fa-pause-circle');
         gif.style.opacity = 1;
     }
-    else{
+    else {
         audioElement.pause();
         masterPlay.classList.remove('fa-pause-circle');
         masterPlay.classList.add('fa-play-circle');
