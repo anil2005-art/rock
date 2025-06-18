@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
 body{
-  background-color: rgb(0, 0, 0); /* your image file */
+   background-image: url('./covers/1.jpg'); /* your image file */
     background-repeat: repeat;            /* repeats horizontally and vertically */
     background-size: auto;                /* keeps original image size */
     background-position: top left;
@@ -24,7 +24,7 @@ nav ul{
     align-items: center;
     list-style-type: none;
     height: 65px;
-    background-color: black;
+    background-color: rgb(244, 7, 7);
     color: white;
 }
 
@@ -35,7 +35,52 @@ nav ul li{
     width: 44px;
     padding: 0 8px;
 }
+.songInfo {
+    border: 2px solid #1DB954; /* Spotify green or any color you like */
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #121212; /* Optional: dark background */
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 10px; /* spacing between image and text */
+    width: fit-content;
+    margin: 10px auto; /* center it horizontally */
+    box-shadow: 0 0 10px rgba(0,0,0,0.5); /* optional shadow */
+}
+.songInfo {
+     border: 2px solid #1DB954; /* Spotify green or any color you like */
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #121212; /* Optional: dark background */
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 10px; /* spacing between image and text */
+    width: fit-content;
+    margin: 10px auto; /* center it horizontally */
+    box-shadow: 0 0 10px rgba(0,0,0,0.5); /* optional shadow *
+}
 
+#masterPlay {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: white; /* or any color you want */
+}
+
+#masterSongName {
+    font-size: 16px;
+    color: white; /* or matching theme */
+}
+
+#gif {
+    width: 40px;
+    height: auto;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
 .brand {
     display: flex;
     align-items: center;
@@ -45,8 +90,8 @@ nav ul li{
 
 .container{
     min-height: 72vh;
-    background-color: rgb(255, 255, 255);
-    color: rgb(255, 251, 251);
+     background-image: url('covers/1.jpg');
+    color: white;
    font-family: 'Varela Round', sans-serif;
    display: flex;
    margin: 23px auto;
@@ -74,7 +119,6 @@ nav ul li{
 .icons i{
     cursor: pointer;
 }
-
 #myProgressBar{
     width: 80vw; 
     cursor: pointer;
@@ -84,10 +128,11 @@ nav ul li{
     margin-top: 74px;
 }
 
+
 .songItem{
     height: 50px;
     display: flex;
-     background-color: rgb(255, 255, 255);
+    background-color: rgb(0, 0, 0);
     
     color: rgb(239, 0, 0);
     margin: 12px 0;
@@ -96,11 +141,21 @@ nav ul li{
     border-radius: 34px;
 }
 
+
 .songItem img{
     width: 43px;
     margin: 0 23px;
     border-radius: 34px;
 }
+#masterPlay, #previous, #next {
+    font-size: 30px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+
+
+
 
 .timestamp{
     margin: 0 23px;
