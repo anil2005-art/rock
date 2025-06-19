@@ -20,7 +20,7 @@ const songs = [
     {songName: "Bhula Dena - Salam-e-Ishq", filePath: "2.mp3", coverPath: "8.jpg"},
     {songName: "Tumhari Kasam - Salam-e-Ishq", filePath: "2.mp3", coverPath: "9.jpg"},
     {songName: "Na Jaana - Salam-e-Ishq", filePath: "4.mp3", coverPath: "10.jpg"},
-
+   ];
 // === Populate Song List ===
 songItems.forEach((item, index) => {
     item.querySelector("img").src = songs[index].coverPath;
